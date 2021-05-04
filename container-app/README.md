@@ -2,7 +2,7 @@
 
 This is the main shell application which serves as an entry point to consume the content exposed by the remote app(s).
 
-## Adding remotes to Webpack
+## Adding remotes in Webpack
 
 Exposed remotes can be used in the shell app by adding them to the remote section of the webpack configuration file as follows:
 
@@ -40,3 +40,27 @@ You can import it or lazy load the components/functions as needed into your reac
 ```
 
 Once imported or lazy loaded, you can use it like any other component.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### yarn dev
+
+Runs the app in development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### yarn prod
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+### yarn clean
+
+Cleans the build folder and all its contents.
