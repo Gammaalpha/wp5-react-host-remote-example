@@ -1,7 +1,7 @@
 {
-  "name": "microfrontend-webpack",
+  "name": "wp5-react-host-remote-example",
   "version": "1.0.0",
-  "description": "Microfront end using Webpack 5, React and Typescript",
+  "description": "Micro frontend using Webpack 5, React and Typescript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gammaalpha/microfrontend-webpack.git"
+    "url": "git+https://github.com/Gammaalpha/wp5-react-host-remote-example.git"
   },
   "keywords": [
     "React",
@@ -22,9 +22,9 @@
   "author": "Gammaalpha",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Gammaalpha/microfrontend-webpack/issues"
+    "url": "https://github.com/Gammaalpha/wp5-react-host-remote-example/issues"
   },
-  "homepage": "https://github.com/Gammaalpha/microfrontend-webpack#readme",
+  "homepage": "https://github.com/Gammaalpha/wp5-react-host-remote-example#readme",
   "devDependencies": {
     "concurrently": "^6.0.2"
   }
