@@ -8,6 +8,7 @@ const sharedDeps = [
   "react-dom",
   "styled-components",
   "react-redux",
+  "react-router-dom",
   "@reduxjs/toolkit",
   "typescript",
   "prop-types",

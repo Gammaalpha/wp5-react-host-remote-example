@@ -8,6 +8,7 @@ const sharedDeps = [
   "styled-components",
   "react-redux",
   "@reduxjs/toolkit",
+  "react-router-dom",
   "typescript",
   "prop-types",
 ]; // add more packages to this array to share across remotes  and shell
