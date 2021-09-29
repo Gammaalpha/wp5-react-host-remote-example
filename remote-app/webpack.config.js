@@ -2,14 +2,36 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 const deps = require("./package.json").dependencies;
+const sharedDeps = [
+  "react",
+  "react-dom",
+  "styled-components",
+  "react-redux",
+  "@reduxjs/toolkit",
+  "typescript",
+  "prop-types",
+]; // add more packages to this array to share across remotes  and shell
 const Dotenv = require("dotenv-webpack");
-const depsPackage = (packageName) => ({
-  [`${packageName}`]: {
-    eager: true,
-    singleton: true,
-    requiredVersion: deps[`${packageName}`],
-  },
-});
+
+/**
+ * Creates a singleton object with dependencies with their required version
+ * @returns object of objects
+ */
+const setSingletonSharedDeps = () => {
+  console.log("Setting singleton shared deps...");
+  return sharedDeps.reduce(
+    (acc, curr) =>
+      Object.assign(acc, {
+        [curr]: {
+          eager: true,
+          singleton: true,
+          requiredVersion: deps[curr],
+        },
+      }),
+    {}
+  );
+};
+
 module.exports = (env) => {
   console.log("Target: ", env.target);
 
@@ -86,9 +108,7 @@ module.exports = (env) => {
         },
         shared: {
           ...deps,
-          ...depsPackage("react"),
-          ...depsPackage("react-dom"),
-          ...depsPackage("styled-components"),
+          ...setSingletonSharedDeps(),
         },
       }),
       new HtmlWebpackPlugin({

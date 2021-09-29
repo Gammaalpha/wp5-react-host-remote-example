@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:shell": "(cd container-app/ && npm run dev)",
     "dev:remote": "(cd remote-app/ && npm run dev)",
-    "dev:all": "concurrently \"npm run dev:remote\"  \"npm run dev:shell\""
+    "dev": "concurrently \"npm run dev:remote\"  \"npm run dev:shell\""
   },
   "repository": {
     "type": "git",
